@@ -20,14 +20,19 @@ public class Game
     private String platforms;
     private Double score;
     private String imgUrl;
+
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
+
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
     public Game(){
 
     }
 
-    public Game ( Long id, String title, Integer year, String genre, String platforms, Double score,String imgUrl, String shortDescription, String longDescription)
+    public Game ( Long id, String title, Integer year, String genre, String platforms,
+                  Double score,String imgUrl, String shortDescription, String longDescription)
     {
         this.title = title;
         this.year = year;
